@@ -21,8 +21,7 @@ security:
                 csrf_token_generator: security.csrf.token_manager
 
             logout:       true
-            anonymous:    true
-
+            
             # activate different ways to authenticate
 
             # http_basic: true
