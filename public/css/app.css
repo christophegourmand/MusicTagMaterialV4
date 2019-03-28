@@ -1,0 +1,27 @@
+:root {
+    --brownBlack: #242015 ;
+    --brownLeather: #2E2A1C;
+}
+
+.bg-brownBlack{
+    background-color: #242015 !important;
+}
+.bg-redDark{
+    background-color: #A01010 !important;
+}
+.bg-yellowLight{
+    background-color: #D8BB30 !important;
+}
+
+.bg-brownLeather{
+    background-color: #2E2A1C !important;
+}
+.bg-orange{
+    background-color: #FFB100 !important;
+}
+.txt-brownLight{
+    color: #968662 !important;
+}
+.txt-grey{
+    color: #020202 !important;
+}
