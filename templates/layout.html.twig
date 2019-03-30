@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>
-        {% block main_block_title %}Welcome!{% endblock %}
+        {% block layout_block_title %}Welcome!{% endblock %}
     </title>
     
     {# ici les stylesheets communs à toutes les pages: #}
-    {#{ include('main_includes/main_incl_stylesheets.html.twig')}#}
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-reboot.min.css') }}" />
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap-grid.min.css') }}" />
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}" />
+    {% include('layout_includes/layout_incl_stylesheets.html.twig') %}
 
     {# ici les stylesheets custom, chaque twig écrasera avec ses propres stylsheets custom #}
-    {% block main_block_customStylesheets %}
-    
+    {% block layout_block_customStylesheets %}
+
     {% endblock %}
 </head>
-
 
 <body class="bg-brownBlack_OFF">
     
     <header class="text-white">
         {{ include('layout_includes/layout_incl_header.html.twig') }}
+
+        <ul class="ulVolante">
+            <li><a href="http://localhost:8000/">/</a></li>
+            <li><a href="http://localhost:8000/register">/register</a></li>
+            <li><a href="http://localhost:8000/login">/login</a></li>
+            <li><a href="http://localhost:8000/moncompte">/moncompte (mien)</a></li>
+            <li><a href="http://localhost:8000/profile">/profile</a></li>
+            <li><a href="http://localhost:8000/profile/edit">/profile/edit</a></li>
+        </ul>
+
     </header>
 
-    
-    
-    {% block main_block_body %}
+    {% block layout_block_body %}
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
@@ -45,6 +48,7 @@
             {% endblock fos_user_content %}
         </div>
 
+
     {% endblock %}
 
 
@@ -54,13 +58,11 @@
 
 
     {# ici les scripts communs à toutes les pages: #}
-        {#{ include('layout_includes/layout_incl_scripts.html.twig')}#}
-        <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
+    {% include('layout_includes/layout_incl_scripts.html.twig') %}
 
     {# ici les scripts custom, chaque twig écrasera avec ses propres scripts custom #}       
-    {% block main_block_customJavascripts %}
+    {% block layout_block_customJavascripts %}
+    
     {% endblock %}
 
 </body>
