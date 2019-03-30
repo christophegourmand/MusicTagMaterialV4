@@ -23,34 +23,17 @@
     <header class="text-white">
         {{ include('layout_includes/layout_incl_header.html.twig') }}
 
-        <ul class="ulVolante">
-            <li><a href="http://localhost:8000/">/</a></li>
-            <li><a href="http://localhost:8000/register">/register</a></li>
-            <li><a href="http://localhost:8000/login">/login</a></li>
-            <li><a href="http://localhost:8000/moncompte">/moncompte (mien)</a></li>
-            <li><a href="http://localhost:8000/profile">/profile</a></li>
-            <li><a href="http://localhost:8000/profile/edit">/profile/edit</a></li>
-        </ul>
-
     </header>
 
-    {% block layout_block_body %}
+    <div class="container my-3">
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
+    </div>
 
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Page d'accueil</h1>
-                <p class="lead">Site en préparation. les liens sont /register /login /moncompte</p>
-            </div>
-        </div>
-
-        <div class="container">
-            {% block fos_user_content %}
-            {% endblock fos_user_content %}
-        </div>
-
-
-    {% endblock %}
-
+    <div class="container">
+        {% block layout_block_body %}
+        {% endblock %}
+    </div>
 
     <footer>
         {{ include('layout_includes/layout_incl_footer.html.twig')}}

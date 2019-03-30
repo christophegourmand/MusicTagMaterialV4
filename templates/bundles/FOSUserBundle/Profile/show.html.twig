@@ -1,22 +1,8 @@
 {# {% extends "@FOSUser/layout.html.twig" %} #}
 {% extends 'layout.html.twig' %}
 
-    {% block layout_block_body %}
 
-        {# <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Votre Profile</h1>
-                <p class="lead">Ici vous pourrez modifier vos informations, et créer une annonce.</p>
-            </div>
-        </div> #}
-
-        <div class="container">
-            {% block fos_user_content %}
-            {% include "@FOSUser/Profile/show_content.html.twig" %}
-            {% endblock fos_user_content %}
-        </div>
-
-    {% endblock %}
-
-
+{% block fos_user_content %}
+{% include "@FOSUser/Profile/show_content.html.twig" %}
+{% endblock fos_user_content %}
 
