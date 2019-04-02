@@ -45,5 +45,46 @@ class Video
      */
     private $material;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getVideolink(): ?string
+    {
+        return $this->videolink;
+    }
+
+    public function setVideolink(string $videolink): self
+    {
+        $this->videolink = $videolink;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getMaterial(): ?Material
+    {
+        return $this->material;
+    }
+
+    public function setMaterial(?Material $material): self
+    {
+        $this->material = $material;
+
+        return $this;
+    }
+
 
 }

@@ -45,5 +45,46 @@ class Audio
      */
     private $material;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getAudiolink(): ?string
+    {
+        return $this->audiolink;
+    }
+
+    public function setAudiolink(string $audiolink): self
+    {
+        $this->audiolink = $audiolink;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getMaterial(): ?Material
+    {
+        return $this->material;
+    }
+
+    public function setMaterial(?Material $material): self
+    {
+        $this->material = $material;
+
+        return $this;
+    }
+
 
 }

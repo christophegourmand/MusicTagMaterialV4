@@ -35,5 +35,34 @@ class Country
      */
     private $flagicon;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getFlagicon(): ?string
+    {
+        return $this->flagicon;
+    }
+
+    public function setFlagicon(?string $flagicon): self
+    {
+        $this->flagicon = $flagicon;
+
+        return $this;
+    }
+
 
 }

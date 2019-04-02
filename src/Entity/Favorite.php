@@ -48,5 +48,46 @@ class Favorite
      */
     private $memberaccount;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getMaterial(): ?Material
+    {
+        return $this->material;
+    }
+
+    public function setMaterial(?Material $material): self
+    {
+        $this->material = $material;
+
+        return $this;
+    }
+
+    public function getMemberaccount(): ?Memberaccount
+    {
+        return $this->memberaccount;
+    }
+
+    public function setMemberaccount(?Memberaccount $memberaccount): self
+    {
+        $this->memberaccount = $memberaccount;
+
+        return $this;
+    }
+
 
 }

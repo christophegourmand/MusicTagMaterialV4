@@ -45,5 +45,46 @@ class Address
      */
     private $city;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getFirstline(): ?string
+    {
+        return $this->firstline;
+    }
+
+    public function setFirstline(string $firstline): self
+    {
+        $this->firstline = $firstline;
+
+        return $this;
+    }
+
+    public function getSecondline(): ?string
+    {
+        return $this->secondline;
+    }
+
+    public function setSecondline(?string $secondline): self
+    {
+        $this->secondline = $secondline;
+
+        return $this;
+    }
+
+    public function getCity(): ?City
+    {
+        return $this->city;
+    }
+
+    public function setCity(?City $city): self
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
 
 }

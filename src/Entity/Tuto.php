@@ -66,5 +66,82 @@ class Tuto
      */
     private $memberaccount;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getAuthorId(): ?int
+    {
+        return $this->authorId;
+    }
+
+    public function setAuthorId(?int $authorId): self
+    {
+        $this->authorId = $authorId;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(?string $content): self
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getVote(): ?int
+    {
+        return $this->vote;
+    }
+
+    public function setVote(int $vote): self
+    {
+        $this->vote = $vote;
+
+        return $this;
+    }
+
+    public function getMemberaccount(): ?Memberaccount
+    {
+        return $this->memberaccount;
+    }
+
+    public function setMemberaccount(?Memberaccount $memberaccount): self
+    {
+        $this->memberaccount = $memberaccount;
+
+        return $this;
+    }
+
 
 }

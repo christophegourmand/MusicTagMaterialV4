@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -48,6 +50,63 @@ class Brand
     public function __construct()
     {
         $this->material = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getPhotolink(): ?string
+    {
+        return $this->photolink;
+    }
+
+    public function setPhotolink(?string $photolink): self
+    {
+        $this->photolink = $photolink;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Material[]
+     */
+    public function getMaterial(): Collection
+    {
+        return $this->material;
+    }
+
+    public function addMaterial(Material $material): self
+    {
+        if (!$this->material->contains($material)) {
+            $this->material[] = $material;
+            $material->addBrand($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMaterial(Material $material): self
+    {
+        if ($this->material->contains($material)) {
+            $this->material->removeElement($material);
+            $material->removeBrand($this);
+        }
+
+        return $this;
     }
 
 }

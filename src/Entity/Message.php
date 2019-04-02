@@ -69,5 +69,82 @@ class Message
      */
     private $memberaccountSender;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(?string $content): self
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    public function getIsRead(): ?bool
+    {
+        return $this->isRead;
+    }
+
+    public function setIsRead(bool $isRead): self
+    {
+        $this->isRead = $isRead;
+
+        return $this;
+    }
+
+    public function getMemberaccountReceiver(): ?Memberaccount
+    {
+        return $this->memberaccountReceiver;
+    }
+
+    public function setMemberaccountReceiver(?Memberaccount $memberaccountReceiver): self
+    {
+        $this->memberaccountReceiver = $memberaccountReceiver;
+
+        return $this;
+    }
+
+    public function getMemberaccountSender(): ?Memberaccount
+    {
+        return $this->memberaccountSender;
+    }
+
+    public function setMemberaccountSender(?Memberaccount $memberaccountSender): self
+    {
+        $this->memberaccountSender = $memberaccountSender;
+
+        return $this;
+    }
+
 
 }

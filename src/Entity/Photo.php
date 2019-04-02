@@ -45,5 +45,46 @@ class Photo
      */
     private $material;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function getPhotolink(): ?string
+    {
+        return $this->photolink;
+    }
+
+    public function setPhotolink(string $photolink): self
+    {
+        $this->photolink = $photolink;
+
+        return $this;
+    }
+
+    public function getAltdescription(): ?string
+    {
+        return $this->altdescription;
+    }
+
+    public function setAltdescription(?string $altdescription): self
+    {
+        $this->altdescription = $altdescription;
+
+        return $this;
+    }
+
+    public function getMaterial(): ?Material
+    {
+        return $this->material;
+    }
+
+    public function setMaterial(?Material $material): self
+    {
+        $this->material = $material;
+
+        return $this;
+    }
+
 
 }
